@@ -1,0 +1,7 @@
+# Simple notes on Model.Matrix
+# A very importance usage of model.matrix is to matrixize/visualize the factor value into numeric value in R.
+# For instance, if i have a sequence of factor value with 5 levels
+a <- factor(sample(1:5,10, replace = T))
+# And I want to convert those factor value into a matrix of 0 and 1, we can use mode.matrix to do so.
+model.matrix(~0+a)
+# each row indicate a factor. For example a factor of 3 is shown as 0,0,1,0,0 in a column.
