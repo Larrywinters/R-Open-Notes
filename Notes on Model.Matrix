@@ -4,4 +4,5 @@
 a <- factor(sample(1:5,10, replace = T))
 # And I want to convert those factor value into a matrix of 0 and 1, we can use mode.matrix to do so.
 model.matrix(~0+a)
-# each row indicate a factor. For example a factor of 3 is shown as 0,0,1,0,0 in a column. Notes that all the value in the matrix are numeric.
+# each row indicate a factor. each column indicates a factor level (in this case 5 columns for 5 levels a1 to a5) 
+# For example a factor of 3 is shown as 0,0,1,0,0 in a row. Notes that all the value in the matrix are numeric.
